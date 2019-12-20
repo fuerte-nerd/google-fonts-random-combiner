@@ -1,0 +1,6 @@
+export const LOAD_FONTS = "LOAD_FONTS";
+export const CHANGE_TEXT = "UPDATE_TEXT";
+export const CHANGE_FONT = "CHANGE_FONT";
+export const TOGGLE_LOCK_FONT = "TOGGLE_LOCK_FONT";
+export const TOGGLE_MODAL = "TOGGLE_MODAL";
+export const TOGGLE_SHOW_SECTION = "TOGGLE_SHOW_SECTION";
