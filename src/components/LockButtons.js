@@ -2,18 +2,19 @@ import React from "react";
 import { connect } from "react-redux";
 import { toggleLock } from "../redux/actions";
 import { Button } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faLockOpen } from "@fortawesome/free-solid-svg-icons";
 
 function LockButtons(props) {
-
-    const handleClick = (e)=>{
-    props.dispatch(toggleLock(e.target.getAttribute('section')))
-    }
+  const handleClick = e => {
+    props.dispatch(toggleLock(e.currentTarget.getAttribute("section")));
+  }
   return (
     <div
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        gridGap: ".1rem"
+        gridGap: "1px"
       }}
     >
       <Button
@@ -23,7 +24,14 @@ function LockButtons(props) {
         section="heading"
         onClick={handleClick}
       >
-        {props.headingLocked ? "Heading Locked" : "Heading Unlocked"}
+        <div className="d-block">
+          Heading
+        </div>
+        {props.headingLocked ? (
+            <FontAwesomeIcon icon={faLock} />
+        ) : (
+          <FontAwesomeIcon icon={faLockOpen} />
+        )}
       </Button>
       <Button
         block
@@ -33,7 +41,14 @@ function LockButtons(props) {
         section="body"
         onClick={handleClick}
       >
-        {props.bodyLocked ? "Body Locked" : "Body Unlocked"}
+        <div className="d-block">
+          Body
+        </div>
+        {props.bodyLocked ? (
+            <FontAwesomeIcon icon={faLock} />
+        ) : (
+          <FontAwesomeIcon icon={faLockOpen} />
+        )}
       </Button>
     </div>
   );

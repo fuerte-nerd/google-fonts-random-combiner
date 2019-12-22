@@ -1,10 +1,13 @@
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+$enable-rounded: false;
+$input-btn-font-family: 'ubuntu';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-body{
-    min-width: 700px;
-    min-height: 500px;
+body {
+  width: 100%;
+  max-width: 700px;
+  max-height: 500px;
 }
 
-header{
-    font-family: 'ubuntu';
+header {
+  font-family: "ubuntu";
 }

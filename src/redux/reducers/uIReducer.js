@@ -1,4 +1,10 @@
-import { TOGGLE_MODAL, TOGGLE_SHOW_SECTION, TOGGLE_LOCK_FONT } from "../types";
+import {
+  TOGGLE_MODAL,
+  TOGGLE_SHOW_SECTION,
+  TOGGLE_LOCK_FONT,
+  TOGGLE_COLORPICKER,
+  CHANGE_COLOR
+} from "../types";
 
 const initialState = {
   heading: {
@@ -16,6 +22,14 @@ const initialState = {
     code: {
       isOpen: false
     }
+  },
+  colorPickers: {
+    text: false,
+    background: false
+  },
+  colors: {
+    text: "#222222",
+    background: "#fafafa"
   }
 };
 
@@ -28,12 +42,21 @@ export default (state = initialState, action) => {
       return data;
 
     case TOGGLE_SHOW_SECTION:
-      data[action.payload.section].isShowing = !action.payload.hide
+      data[action.payload.section].isShowing = !action.payload.hide;
       return data;
 
     case TOGGLE_LOCK_FONT:
       data[action.payload].isLocked = !data[action.payload].isLocked;
       return data;
+
+    case TOGGLE_COLORPICKER:
+      data.colorPickers[action.payload] = !data.colorPickers[action.payload];
+      return data;
+
+    case CHANGE_COLOR:
+      data.colors[action.payload.section] = action.payload.color;
+      return data;
+
     default:
       return data;
   }

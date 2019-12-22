@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { toggleModal } from "../redux/actions";
 import {
@@ -53,7 +53,3 @@ const mapStateToProps = state => ({
   currentFonts: state.data.currentFonts
 });
 export default connect(mapStateToProps)(CodeModal);
-
-// currentFonts.body.font.family.replace(
-// / /g,
-// "+"

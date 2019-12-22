@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Transition, animated } from "react-spring/renderprops";
 
@@ -6,7 +6,7 @@ function Content(props) {
   return props.currentFonts.heading.font && props.currentFonts.body.font ? (
     <>
       <div className="mt-4" style={{
-        height: '4rem'
+        minHeight: '4rem'
       }}> 
         <Transition
           items={props.isShowing.heading}
