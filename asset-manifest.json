@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/google-fonts-random-combiner/static/css/main.72be7f8c.chunk.css",
+    "main.js": "/google-fonts-random-combiner/static/js/main.cdd8085c.chunk.js",
+    "main.js.map": "/google-fonts-random-combiner/static/js/main.cdd8085c.chunk.js.map",
+    "runtime-main.js": "/google-fonts-random-combiner/static/js/runtime-main.0f19314d.js",
+    "runtime-main.js.map": "/google-fonts-random-combiner/static/js/runtime-main.0f19314d.js.map",
+    "static/js/2.5fae3cda.chunk.js": "/google-fonts-random-combiner/static/js/2.5fae3cda.chunk.js",
+    "static/js/2.5fae3cda.chunk.js.map": "/google-fonts-random-combiner/static/js/2.5fae3cda.chunk.js.map",
+    "index.html": "/google-fonts-random-combiner/index.html",
+    "precache-manifest.aab6007a33eeb965a5544b8714a90286.js": "/google-fonts-random-combiner/precache-manifest.aab6007a33eeb965a5544b8714a90286.js",
+    "service-worker.js": "/google-fonts-random-combiner/service-worker.js",
+    "static/css/main.72be7f8c.chunk.css.map": "/google-fonts-random-combiner/static/css/main.72be7f8c.chunk.css.map",
+    "static/js/2.5fae3cda.chunk.js.LICENSE": "/google-fonts-random-combiner/static/js/2.5fae3cda.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f19314d.js",
+    "static/js/2.5fae3cda.chunk.js",
+    "static/css/main.72be7f8c.chunk.css",
+    "static/js/main.cdd8085c.chunk.js"
+  ]
+}
