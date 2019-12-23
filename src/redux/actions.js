@@ -6,7 +6,8 @@ import {
   TOGGLE_SHOW_SECTION,
   LOAD_FONTS,
   TOGGLE_COLORPICKER,
-  CHANGE_COLOR
+  CHANGE_COLOR,
+  TOGGLE_CREDITS
 } from "./types";
 
 export const loadFonts = fonts => ({
@@ -62,4 +63,8 @@ export const changeColor = (section, color)=>({
     section,
     color
   }
+})
+
+export const toggleCredits = ()=>({
+  type: TOGGLE_CREDITS,
 })

@@ -3,7 +3,8 @@ import {
   TOGGLE_SHOW_SECTION,
   TOGGLE_LOCK_FONT,
   TOGGLE_COLORPICKER,
-  CHANGE_COLOR
+  CHANGE_COLOR,
+  TOGGLE_CREDITS
 } from "../types";
 
 const initialState = {
@@ -30,7 +31,8 @@ const initialState = {
   colors: {
     text: "#222222",
     background: "#fafafa"
-  }
+  },
+  showCredits: false
 };
 
 export default (state = initialState, action) => {
@@ -57,6 +59,9 @@ export default (state = initialState, action) => {
       data.colors[action.payload.section] = action.payload.color;
       return data;
 
+    case TOGGLE_CREDITS:
+      data.showCredits = !data.showCredits;
+      return data;
     default:
       return data;
   }

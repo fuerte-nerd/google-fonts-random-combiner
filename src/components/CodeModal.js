@@ -37,6 +37,17 @@ function CodeModal(props) {
             />
           ) : null}
         </FormGroup>
+        <FormGroup>
+          <Label for="css">Colors</Label>
+          {/* {props.currentFonts.heading.font && props.currentFonts.body.font ? ( */}
+            <Input
+              type="textarea"
+              id="css"
+              value={`background-color: ${props.colors.bg};\ncolor: ${props.colors.text};`}
+              readOnly
+            />
+          {/* ) : null} */}
+        </FormGroup>
       </ModalBody>
       <ModalFooter>
         <Button color="danger" action="toggle" onClick={toggle}>
@@ -50,6 +61,10 @@ function CodeModal(props) {
 const mapStateToProps = state => ({
   codeModalIsOpen: state.uI.modals.code.isOpen,
   link: `https://fonts.googleapis.com/css?family=${state.data.currentFonts.heading.link}|${state.data.currentFonts.body.link}`,
-  currentFonts: state.data.currentFonts
+  currentFonts: state.data.currentFonts,
+  colors: {
+    bg: state.uI.colors.background,
+    text: state.uI.colors.text
+  }
 });
 export default connect(mapStateToProps)(CodeModal);

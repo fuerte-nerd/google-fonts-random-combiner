@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadFonts, changeFont } from "./redux/actions";
-import { Container } from "reactstrap";
+import { loadFonts, changeFont, toggleCredits } from "./redux/actions";
+import { Container, Button } from "reactstrap";
 import "./App.scss";
 
 import Content from "./components/Content";
@@ -9,6 +9,7 @@ import GoogleFontsLink from "./components/GoogleFontsLink";
 import EditTextModal from "./components/EditTextModal";
 import CodeModal from "./components/CodeModal";
 import Tools from "./components/Tools"
+import Credits from "./components/Credits";
 
 function App(props) {
   useEffect(() => {
@@ -48,6 +49,10 @@ function App(props) {
     }
   };
 
+  const handleClick = ()=>{
+    props.dispatch(toggleCredits())
+  }
+
   return (
     <div className="App" style={{
       background: props.bgColor,
@@ -60,9 +65,17 @@ function App(props) {
       <EditTextModal />
       <CodeModal />
       <Tools randomFontGetter={getRandomFont} />
-      <Container>
+      <Container style={{
+        marginTop: '3rem'
+      }}>
         <Content />
       </Container>
+      <Credits />
+      <Button color="secondary" size="sm" onClick={handleClick} style={{
+        position: 'fixed',
+        bottom: 0,
+        right: 0
+      }}>About</Button>
     </div>
   );
 }
