@@ -23,9 +23,7 @@ function GoogleFontsLink(props) {
   }, [props.link]);
   return props.currentFonts.heading.font && props.currentFonts.body.font ? (
     <HelmetProvider>
-      <Helmet>
-        <link rel="stylesheet" href={props.link} />
-      </Helmet>
+      <Helmet link={[{"href": props.link, "rel": "stylesheet"}]}/>
     </HelmetProvider>
   ) : null;
 }

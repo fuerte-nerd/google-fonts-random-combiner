@@ -61,6 +61,7 @@ function Content(props) {
 }
 
 const mapStateToProps = state => ({
+
   isShowing: {
     heading: state.uI.heading.isShowing,
     body: state.uI.body.isShowing

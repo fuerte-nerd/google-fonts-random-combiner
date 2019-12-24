@@ -11,7 +11,7 @@ import {
 
 function ColorButtons(props) {
   const handleClick = e => {
-    props.dispatch(togglePicker(e.target.getAttribute("section")));
+    props.dispatch(togglePicker(e.currentTarget.getAttribute("section")));
   };
 
   const handleBgChange = color => {
