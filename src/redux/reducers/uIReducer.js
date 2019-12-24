@@ -62,6 +62,7 @@ export default (state = initialState, action) => {
     case TOGGLE_CREDITS:
       data.showCredits = !data.showCredits;
       return data;
+      
     default:
       return data;
   }

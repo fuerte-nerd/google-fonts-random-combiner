@@ -4,6 +4,7 @@ import { hideSection, toggleModal } from "../redux/actions";
 import { Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt, faEdit, faCode } from "@fortawesome/free-solid-svg-icons";
+import ReactTooltip from "react-tooltip";
 
 function MainButtons(props) {
   const handleClick = e => {
@@ -30,46 +31,52 @@ function MainButtons(props) {
     }
   };
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr"
-      }}
-    >
-      <div>
-        <Button
-          block
-          color="primary"
-          size="lg"
-          id="edit-text"
-          onClick={handleClick}
-        >
-          <FontAwesomeIcon icon={faEdit} />
-        </Button>
+    <>
+    <ReactTooltip />
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr"
+        }}
+      >
+        <div>
+          <Button
+            block
+            color="primary"
+            size="lg"
+            id="edit-text"
+            onClick={handleClick}
+            data-tip="Edit the text!"
+          >
+            <FontAwesomeIcon icon={faEdit} />
+          </Button>
+        </div>
+        <div>
+          <Button
+            block
+            color="warning"
+            size="lg"
+            id="refresh"
+            onClick={handleClick}
+            data-tip="Get new font(s)!"
+          >
+            <FontAwesomeIcon icon={faSyncAlt} />
+          </Button>
+        </div>
+        <div>
+          <Button
+            block
+            color="info"
+            size="lg"
+            id="get-code"
+            onClick={handleClick}
+            data-tip="Get the code!"
+          >
+            <FontAwesomeIcon icon={faCode} />
+          </Button>
+        </div>
       </div>
-      <div>
-        <Button
-          block
-          color="warning"
-          size="lg"
-          id="refresh"
-          onClick={handleClick}
-        >
-          <FontAwesomeIcon icon={faSyncAlt} />
-        </Button>
-      </div>
-      <div>
-        <Button
-          block
-          color="info"
-          size="lg"
-          id="get-code"
-          onClick={handleClick}
-        >
-          <FontAwesomeIcon icon={faCode} />
-        </Button>
-      </div>
-    </div>
+    </>
   );
 }
 

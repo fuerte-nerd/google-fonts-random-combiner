@@ -8,7 +8,7 @@ import { faLock, faLockOpen } from "@fortawesome/free-solid-svg-icons";
 function LockButtons(props) {
   const handleClick = e => {
     props.dispatch(toggleLock(e.currentTarget.getAttribute("section")));
-  }
+  };
   return (
     <div
       style={{
@@ -23,12 +23,15 @@ function LockButtons(props) {
         size="sm"
         section="heading"
         onClick={handleClick}
+        data-tip={
+          props.headingLocked
+            ? "Unlock the heading font"
+            : "Lock the heading font"
+        }
       >
-        <div className="d-block">
-          Heading
-        </div>
+        <div className="d-block">Heading</div>
         {props.headingLocked ? (
-            <FontAwesomeIcon icon={faLock} />
+          <FontAwesomeIcon icon={faLock} />
         ) : (
           <FontAwesomeIcon icon={faLockOpen} />
         )}
@@ -40,12 +43,13 @@ function LockButtons(props) {
         size="sm"
         section="body"
         onClick={handleClick}
+        data-tip={
+          props.bodyLocked ? "Unlock the body font" : "Lock the body font"
+        }
       >
-        <div className="d-block">
-          Body
-        </div>
+        <div className="d-block">Body</div>
         {props.bodyLocked ? (
-            <FontAwesomeIcon icon={faLock} />
+          <FontAwesomeIcon icon={faLock} />
         ) : (
           <FontAwesomeIcon icon={faLockOpen} />
         )}

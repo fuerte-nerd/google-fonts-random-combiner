@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { toggleCredits } from "../redux/actions";
 import { Transition } from "react-spring/renderprops";
+import { Container } from "reactstrap"
 
 function Credits(props) {
   const handleClick = () => {
     props.dispatch(toggleCredits());
   };
-  //   if (props.isShowing) {
   return (
     <Transition
       items={props.isShowing}
@@ -36,7 +36,7 @@ function Credits(props) {
             }}
             onClick={handleClick}
           >
-            <div>
+            <Container style={{textAlign: 'center'}}>
               <h1
                 style={{
                   display: "inline-block"
@@ -56,7 +56,7 @@ function Credits(props) {
               <p>
                 <small>&copy; 2019 Fuerte Nerd</small>
               </p>
-            </div>
+            </Container>
           </div>
         ))
       }

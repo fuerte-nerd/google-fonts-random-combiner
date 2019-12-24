@@ -2,7 +2,6 @@ import { CHANGE_FONT, CHANGE_TEXT, TOGGLE_LOCK_FONT, LOAD_FONTS } from "../types
 
 const initialState = {
   data: null,
-  link: null,
   currentFonts: {
     heading: {
       font: null,
@@ -29,18 +28,21 @@ export default (state = initialState, action) => {
     case LOAD_FONTS:
       data.data = action.payload.fonts;
       return data;
+
     case CHANGE_FONT:
       data.currentFonts[action.payload.section].font = action.payload.font;
       data.currentFonts[action.payload.section].link = action.payload.link
-      
       return data;
+
     case CHANGE_TEXT:
       data.text[action.payload.section] = action.payload.text;
       return data;
+
     case TOGGLE_LOCK_FONT:
       data.currentFonts[action.payload].locked = !data.currentFonts[
         action.payload].locked;
       return data;
+      
     default:
       return data;
   }

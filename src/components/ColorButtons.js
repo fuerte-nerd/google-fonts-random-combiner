@@ -4,7 +4,10 @@ import { togglePicker, changeColor } from "../redux/actions";
 import { Button } from "reactstrap";
 import { ChromePicker } from "react-color";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPalette } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretDown,
+  faCaretUp
+} from "@fortawesome/free-solid-svg-icons";
 
 function ColorButtons(props) {
   const handleClick = e => {
@@ -26,11 +29,13 @@ function ColorButtons(props) {
       }}
     >
       <div style={{ position: "relative" }}>
-        <Button block size="sm" section="background" onClick={handleClick}>
-          {props.bgPickerIsShowing
-            ? "Close Background Palette"
-            : "Open Background Palette"}{" "}
-          <FontAwesomeIcon icon={faPalette} />
+        <Button block size="sm" section="background" onClick={handleClick} data-tip="Change the background color!">
+          Background Color{` `}
+          {props.bgPickerIsShowing ? (
+            <FontAwesomeIcon icon={faCaretUp} />
+          ) : (
+            <FontAwesomeIcon icon={faCaretDown} />
+          )}
         </Button>
         {props.bgPickerIsShowing ? (
           <div
@@ -49,11 +54,13 @@ function ColorButtons(props) {
         ) : null}
       </div>
       <div style={{ position: "relative" }}>
-        <Button block size="sm" section="text" onClick={handleClick}>
-          {props.textPickerIsShowing
-            ? "Close Text Palette"
-            : "Open Text Palette"}{" "}
-          <FontAwesomeIcon icon={faPalette} />
+        <Button block size="sm" section="text" onClick={handleClick} data-tip="Change the text color!">
+          Text Color{` `}
+          {props.textPickerIsShowing ? (
+            <FontAwesomeIcon icon={faCaretUp} />
+          ) : (
+            <FontAwesomeIcon icon={faCaretDown} />
+          )}
         </Button>
         {props.textPickerIsShowing ? (
           <div
