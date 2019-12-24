@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ccfdb4e2357cafaa7a85d7cf4dabb1f",
+    "revision": "c9930b7ed2d0c5e09633fa2a742c5b5f",
     "url": "/google-fonts-random-combiner/index.html"
   },
   {
-    "revision": "97c1226afb3484bc3376",
+    "revision": "ed9a0f4473e96e5bcd73",
     "url": "/google-fonts-random-combiner/static/css/main.72be7f8c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/google-fonts-random-combiner/static/js/2.a7a8dee2.chunk.js.LICENSE"
   },
   {
-    "revision": "97c1226afb3484bc3376",
-    "url": "/google-fonts-random-combiner/static/js/main.cd769d79.chunk.js"
+    "revision": "ed9a0f4473e96e5bcd73",
+    "url": "/google-fonts-random-combiner/static/js/main.c95da4f8.chunk.js"
   },
   {
     "revision": "21d20f452ded59f91ab5",
