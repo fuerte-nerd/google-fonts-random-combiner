@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9930b7ed2d0c5e09633fa2a742c5b5f",
+    "revision": "61a53cd0eec9169e7c172b5878bddfe0",
     "url": "/google-fonts-random-combiner/index.html"
   },
   {
